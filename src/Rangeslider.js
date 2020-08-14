@@ -71,6 +71,19 @@ class Slider extends Component {
     resizeObserver.observe(this.slider)
   }
 
+  addListeners() {
+    // To make sure that we never add more than one listener
+    this.removeListeners()
+
+    document.addEventListener('mousemove', this.handleDrag)
+    document.addEventListener('mouseup', this.handleEnd)
+  }
+
+  removeListeners() {
+    document.removeEventListener('mousemove', this.handleDrag)
+    document.removeEventListener('mouseup', this.handleEnd)
+  }
+
   /**
    * Format label/tooltip value
    * @param  {Number} - value
@@ -107,8 +120,7 @@ class Slider extends Component {
    */
   handleStart = e => {
     const { onChangeStart } = this.props
-    document.addEventListener('mousemove', this.handleDrag)
-    document.addEventListener('mouseup', this.handleEnd)
+    this.addListeners()
     this.setState(
       {
         active: true
@@ -157,8 +169,7 @@ class Slider extends Component {
         onChangeComplete && onChangeComplete(e)
       }
     )
-    document.removeEventListener('mousemove', this.handleDrag)
-    document.removeEventListener('mouseup', this.handleEnd)
+    this.removeListeners()
   };
 
   /**

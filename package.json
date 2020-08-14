@@ -1,8 +1,8 @@
 {
-  "name": "@appigram/react-rangeslider",
+  "name": "@ib-sundeep/react-rangeslider",
   "version": "2.2.6",
   "description": "A lightweight react component that acts as a HTML5 input range slider polyfill",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "clean:lib": "del lib umd",
     "clean:docs": "del public",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/appigram/react-rangeslider.git"
+    "url": "https://github.com/ib-sundeep/react-rangeslider.git"
   },
   "files": [
     "lib",
@@ -46,18 +46,18 @@
     "slider"
   ],
   "author": {
-    "name": "Eugene Sysmanov",
-    "email": "appigram@gmail.com",
-    "url": "github.com/appigram"
+    "name": "Sundeep Babbur",
+    "email": "sundeep@interviewbit.com",
+    "url": "github.com/ib-sundeep"
   },
   "engines": {
     "node": ">=4"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/appigram/react-rangeslider/issues"
+    "url": "https://github.com/ib-sundeep/react-rangeslider/issues"
   },
-  "homepage": "https://github.com/appigram/react-rangeslider#readme",
+  "homepage": "https://github.com/ib-sundeep/react-rangeslider#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
